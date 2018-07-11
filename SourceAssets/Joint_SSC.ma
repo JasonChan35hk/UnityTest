@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Joint_SSC.ma
-//Last modified: Wed, Jul 11, 2018 06:23:49 PM
+//Last modified: Wed, Jul 11, 2018 06:36:37 PM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -89,12 +89,12 @@ fileInfo "cutIdentifier" "201310090514-890429";
 fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 32.493855380859486 10.639467246833091 38.072141438120369 ;
-	setAttr ".r" -type "double3" -8.738352729602795 37.800000000000992 0 ;
+	setAttr ".t" -type "double3" -47.463817550794992 16.015321199259507 -21.180674262888225 ;
+	setAttr ".r" -type "double3" -12.338352729602494 -115.39999999999705 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 51.842758353272885;
+	setAttr ".coi" 53.794017914898504;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1513,14 +1513,14 @@ createNode skinCluster -n "skinCluster1";
 	setAttr -s 4 ".wl[561].w[0:3]"  0.00087401344916453248 0.0066461853177771108 
 		0.49623990061652917 0.49623990061652917;
 	setAttr -s 4 ".pm";
-	setAttr ".pm[0]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 -0
-		 0.99999999999999978 2.2204460492503121e-016 -0 0 0 -0 1 -0 -0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 -0
-		 0.99999999999999978 2.2204460492503121e-016 -0 0 0 -0 1 -0 -4 -8.8817841970012504e-016 -0.072921730675743479 1;
-	setAttr ".pm[2]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 -0
-		 0.99999999999999978 2.2204460492503121e-016 -0 0 0 -0 1 -0 -6.9999999999999991 -1.5543122344752186e-015 -0.17501215362177977 1;
-	setAttr ".pm[3]" -type "matrix" 0.99999999999999956 -0 0 -0 -0 0.99999999999999956 -0 0
-		 0 -0 1 -0 -0 -9.9999999999999947 -0.1750121536217798 1;
+	setAttr ".pm[0]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 0
+		 0.99999999999999978 2.2204460492503121e-016 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 0
+		 0.99999999999999978 2.2204460492503121e-016 0 0 0 0 1 0 -4 -8.8817841970012504e-016 -0.072921730675743479 1;
+	setAttr ".pm[2]" -type "matrix" 2.2204460492503121e-016 -0.99999999999999978 0 0
+		 0.99999999999999978 2.2204460492503121e-016 0 0 0 0 1 0 -6.9999999999999991 -1.5543122344752186e-015 -0.17501215362177977 1;
+	setAttr ".pm[3]" -type "matrix" 0.99999999999999956 0 0 0 0 0.99999999999999956 0 0
+		 0 0 1 0 0 -9.9999999999999947 -0.1750121536217798 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 6.4288884682296468 0 0 0 0 1 0 0 5.1045211473018979 0 1;
 	setAttr -s 4 ".ma";
 	setAttr -s 4 ".dpf[0:3]"  4 4 4 4;
@@ -1689,8 +1689,8 @@ createNode animCurveTA -n "joint3_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0 48 0;
 select -ne :time1;
-	setAttr ".o" 10;
-	setAttr ".unw" 10;
+	setAttr ".o" 24;
+	setAttr ".unw" 24;
 select -ne :renderPartition;
 	setAttr -s 2 ".st";
 select -ne :initialShadingGroup;
